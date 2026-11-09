@@ -18,6 +18,7 @@ const members = [
     name: "Rita Vieira",
     course: "LEIC",
     href: "/members/rita",
+    photo: "/pictures/rita.jpg"
   }
 ];
 
