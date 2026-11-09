@@ -24,9 +24,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 app/
   page.tsx                  → Initial page
   layout.tsx               
-  membros/
+  members/
+    page.tsx                → Members page 
     [slug]/page.tsx         → personal page 
 components/
-  Navbar.tsx
+  Card.tsx
+  ProfileCard.tsx
 public/
   pictures/                
