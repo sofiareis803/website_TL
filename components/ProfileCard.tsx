@@ -12,7 +12,7 @@ export default function ProfileCard({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-zinc-200 p-8 text-center dark:border-zinc-800 lg:sticky lg:top-8">
+    <div className="rounded-2xl border border-zinc-200 bg-white p-8 text-center lg:sticky lg:top-8 dark:border-zinc-800 dark:bg-zinc-900">
       <Image
         src={photo}
         alt={`Photo of ${name}`}
