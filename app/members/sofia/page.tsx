@@ -33,25 +33,18 @@ export default function SofiaPage() {
 
         <div className="space-y-10 lg:col-span-2">
           <Card title="Projects">
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <div className="rounded-xl bg-zinc-50 p-5 dark:bg-zinc-900">
-                <h3 className="font-medium">Project title</h3>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-                  A short description of the project.
-                </p>
-              </div>
-              <div className="rounded-xl bg-zinc-50 p-5 dark:bg-zinc-900">
-                <h3 className="font-medium">Another project</h3>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-                  A short description of the project.
-                </p>
-              </div>
+            <div className="rounded-xl bg-zinc-50 p-5 dark:bg-zinc-900">
+              <h3 className="font-medium">TaxiGes project</h3>
+              <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                O TaxiGes é uma aplicação web desenvolvida para modernizar a gestão de uma empresa de táxis, 
+                permitindo o controlo de frotas, motoristas, turnos e pedidos de serviço através de uma interface intuitiva e funcional.
+              </p>
             </div>
           </Card>
 
           <Card title="What I Expect to Learn">
             <p className="leading-7 text-zinc-600 dark:text-zinc-400">
-              Write here what you hope to learn.
+              Melhorar o meu trabalho em equipa e a minha capacidade de colaboração num projeto real.
             </p>
           </Card>
         </div>
