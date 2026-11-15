@@ -14,13 +14,13 @@ export default function Home() {
       />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-white/70 dark:bg-slate-950/75" />
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-12 pt-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch lg:px-12 lg:pb-16">
-        <div className="flex flex-col justify-center py-10 lg:py-16">
-          <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-sky-800 dark:text-sky-300">
-            <span className="h-px w-9 bg-orange-500" />
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 pb-12 pt-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch lg:px-12 lg:pb-16">
+        <div className="flex min-w-0 flex-col justify-center py-10 lg:py-16">
+          <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-sky-800 sm:tracking-[0.24em] dark:text-sky-300">
+            <span className="h-px w-9 shrink-0 bg-orange-500" />
             TLMoto · Técnico Lisboa
           </p>
-          <h1 className="max-w-xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             TLMoto
             <span className="block text-sky-800 dark:text-sky-300">Recrutamento</span>
           </h1>
