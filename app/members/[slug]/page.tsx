@@ -5,6 +5,7 @@ import Card from "@/components/Card";
 import ProfileCard from "@/components/ProfileCard";
 import { members } from "@/data/members";
 import { Suspense } from "react";
+import FadeIn from "@/components/FadeIn";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -36,8 +37,6 @@ export default async function MemberPage({ params }: Props) {
   );
 }
 
-
-
 async function MemberContent({ params }: Props) {
     const { slug } = await params;
     const member = members.find((m) => m.slug === slug);
@@ -47,6 +46,7 @@ async function MemberContent({ params }: Props) {
     return (
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
             <aside className="lg:col-span-1">
+              <FadeIn>
                 <ProfileCard
                 photo={member.photo}
                 name={member.name}
@@ -66,32 +66,37 @@ async function MemberContent({ params }: Props) {
                     ))}
                     </ul>
                 </ProfileCard>
+              </FadeIn>
             </aside>
             <div className="space-y-8 lg:col-span-2">
-            <Card title="Projetos">
-                <div className="space-y-4">
-                {member.projects.map((project) => (
-                    <div
-                    key={project.title}
-                    className="rounded-xl bg-zinc-50 p-5 dark:bg-zinc-900"
-                    >
-                    <h3 className="font-medium">
-                        {(
-                        project.title
-                        )}
-                    </h3>
-                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-                        {project.description}
-                    </p>
-                    </div>
-                ))}
-                </div>
-            </Card>
-            <Card title="O que espero aprender">
-                <p className="leading-7 text-zinc-600 dark:text-zinc-400">
-                {member.expectations}
-                </p>
-            </Card>
+            <FadeIn delay={0.1}>
+              <Card title="Projetos">
+                  <div className="space-y-4">
+                  {member.projects.map((project) => (
+                      <div
+                      key={project.title}
+                      className="rounded-xl bg-zinc-50 p-5 dark:bg-zinc-900"
+                      >
+                      <h3 className="font-medium">
+                          {(
+                          project.title
+                          )}
+                      </h3>
+                      <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                          {project.description}
+                      </p>
+                      </div>
+                  ))}
+                  </div>
+              </Card>
+            </FadeIn>
+            <FadeIn delay={0.3}> 
+              <Card title="O que espero aprender">
+                  <p className="leading-7 text-zinc-600 dark:text-zinc-400">
+                  {member.expectations}
+                  </p>
+              </Card>
+            </FadeIn>
         </div>
     </div>
     );
