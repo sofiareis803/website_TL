@@ -26,9 +26,12 @@ export default function Header() {
           </Link>
 
           <div className="group relative">
-            <Link href="/members" className={linkClass}>
+            <button
+              type="button"
+              className={`${linkClass} border-0 bg-transparent p-0`}
+            >
               Membros ▾
-            </Link>
+            </button>
 
             <ul className="invisible absolute right-0 top-full w-52 rounded-xl border border-zinc-200 bg-white p-2 opacity-0 shadow-lg transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 dark:border-zinc-800 dark:bg-zinc-900">
               {members.map((m) => (
